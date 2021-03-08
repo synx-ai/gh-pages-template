@@ -26,7 +26,7 @@
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
-    "test": "lint",
+    "test": "yarn lint",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,html}\"",
     "lint": "prettier --check \"**/*.{js,jsx,ts,tsx,css,scss,html}\""
   },
