@@ -5,7 +5,7 @@ import { Title } from "./components/Title.js";
 import { CodeBlock } from "./components/CodeBlock.js";
 import { Footer } from "./components/Footer.js";
 import { Header } from "./components/Header.js";
-import Readme from "../../readme";
+import Readme from "./readme.js";
 import "./assets/styles.css.proxy.js";
 import { jsx as _jsx } from "../_snowpack/pkg/react/jsx-runtime.js";
 import { jsxs as _jsxs } from "../_snowpack/pkg/react/jsx-runtime.js";

@@ -106,6 +106,8 @@ var MDXProvider = function MDXProvider(props) {
     value: allComponents
   }, props.children);
 };
+
+var TYPE_PROP_NAME = 'mdxType';
 var DEFAULTS = {
   inlineCode: 'code',
   wrapper: function wrapper(_ref) {
@@ -137,5 +139,34 @@ var MDXCreateElement = /*#__PURE__*/react.forwardRef(function (props, ref) {
   }, etc));
 });
 MDXCreateElement.displayName = 'MDXCreateElement';
+function createElement (type, props) {
+  var args = arguments;
+  var mdxType = props && props.mdxType;
 
-export { MDXProvider };
+  if (typeof type === 'string' || mdxType) {
+    var argsLength = args.length;
+    var createElementArgArray = new Array(argsLength);
+    createElementArgArray[0] = MDXCreateElement;
+    var newProps = {};
+
+    for (var key in props) {
+      if (hasOwnProperty.call(props, key)) {
+        newProps[key] = props[key];
+      }
+    }
+
+    newProps.originalType = type;
+    newProps[TYPE_PROP_NAME] = typeof type === 'string' ? type : mdxType;
+    createElementArgArray[1] = newProps;
+
+    for (var i = 2; i < argsLength; i++) {
+      createElementArgArray[i] = args[i];
+    }
+
+    return react.createElement.apply(null, createElementArgArray);
+  }
+
+  return react.createElement.apply(null, args);
+}
+
+export { MDXProvider, createElement as mdx };
