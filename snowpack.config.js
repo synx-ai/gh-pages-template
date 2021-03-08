@@ -1,7 +1,7 @@
 try {
-  const pkg = require('../package.json');
+  const pkg = require("../package.json");
 } catch {
-  const pkg = require('./package.json');
+  const pkg = require("./package.json");
 }
 
 process.env.SNOWPACK_PUBLIC_TITLE = pkg.name;
@@ -33,7 +33,7 @@ module.exports = {
     /* ... */
   },
   buildOptions: {
-    baseUrl: '/gh-pages-snowpack',
-    out: "../docs"
+    baseUrl: "/gh-pages-snowpack",
+    out: "../docs",
   },
 };
