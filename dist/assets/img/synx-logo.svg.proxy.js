@@ -1,0 +1,1 @@
+export default "/dist/assets/img/synx-logo.svg";
