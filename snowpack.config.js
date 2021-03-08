@@ -15,6 +15,7 @@ if (fs.existsSync(path.resolve(process.cwd(), "../package.json"))) {
 
 process.env.SNOWPACK_PUBLIC_TITLE = pkg.name;
 process.env.SNOWPACK_PUBLIC_DESCRIPTION = pkg.description;
+process.env.SNOWPACK_PUBLIC_REPO = pkg.repository.url.replace(/^git\+/, "");
 
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
@@ -32,8 +33,9 @@ module.exports = {
     // {"match": "routes", "src": ".*", "dest": "/index.html"},
   ],
   optimize: {
-    /* Example: Bundle your final build: */
-    // "bundle": true,
+    bundle: true,
+    minify: true,
+    target: "es2018",
   },
   packageOptions: {
     knownEntrypoints: ["react/jsx-runtime"],

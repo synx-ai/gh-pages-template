@@ -12,7 +12,7 @@ export const Header = () => {
               </a>
             </div>
             <div className="col-6">
-              <a href="https://synx.ai" target="_blank">
+              <a href={import.meta.env.SNOWPACK_PUBLIC_REPO} target="_blank">
                 <img src="assets/img/github.svg" className="github" />
               </a>
             </div>

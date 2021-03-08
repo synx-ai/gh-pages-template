@@ -12,12 +12,23 @@ jobs:
       template-dir: ./gh-pages-template
 
     steps:
+    # copy your repo to actions
     - uses: actions/checkout@master
 
+    # clone this repo to a subdir
     - uses: actions/checkout@master
       with:
         repository: synx-ai/gh-pages-template
         path: ${{env.template-dir}}
+
+    # clone the "README.md" file, you may edit this
+    # please note that only markdown and mdx files are supported and
+    # filenames are case sensitive.
+    - name: 🧬 Readme.md cloning
+      uses: canastro/copy-file-action@master
+      with:
+        source: "README.md"
+        target: "gh-pages-template/src/README.md"
 
     - name: ⚙️ Install dependencies
       working-directory: ${{env.template-dir}}
@@ -31,6 +42,7 @@ jobs:
       working-directory: ${{env.template-dir}}
       run: yarn build
 
+    # this will deploy to gh-pages branch, remember to enable it in repo settings
     - name: 🚀 Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
