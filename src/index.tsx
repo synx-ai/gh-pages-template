@@ -5,7 +5,7 @@ import { Title } from "./components/Title";
 import { CodeBlock } from "./components/CodeBlock";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
-import Readme from "./readme";
+import Readme from "../../readme";
 import "./assets/styles.scss";
 
 const App = ({ props }) => {

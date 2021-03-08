@@ -43,6 +43,6 @@ module.exports = {
   },
   buildOptions: {
     baseUrl: pkg.baseUrl !== undefined ? pkg.baseUrl : "/",
-    out: "./docs",
+    out: "../docs",
   },
 };
