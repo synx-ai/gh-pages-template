@@ -1,0 +1,48 @@
+{
+  "name": "@synx-ai/gh-pages-template",
+  "version": "0.8.0",
+  "main": "dist/index.html",
+  "license": "MIT",
+  "description": "Template to genenerate a React GitHub page from a readme file.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synx-ai/gh-pages-template"
+  },
+  "bugs": {
+    "url": "https://github.com/synx-ai/gh-pages-template/issues"
+  },
+  "keywords": [
+    "docgen",
+    "generator",
+    "documentation",
+    "markdown",
+    "mdx"
+  ],
+  "author": {
+    "name": "Carlos Rivera",
+    "email": "carlos@synx.ai",
+    "url": "https://github.com/carlosrivera"
+  },
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,html}\"",
+    "lint": "prettier --check \"**/*.{js,jsx,ts,tsx,css,scss,html}\""
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.12.13",
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "@snowpack/plugin-babel": "^2.1.6",
+    "@snowpack/plugin-postcss": "^1.1.0",
+    "@snowpack/plugin-sass": "^1.3.0",
+    "autoprefixer": "^10.2.5",
+    "prettier": "^2.2.1",
+    "prism-react-renderer": "^1.2.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "snowpack": "^3.0.13",
+    "snowpack-plugin-mdx": "^0.3.1"
+  }
+}
