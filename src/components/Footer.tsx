@@ -1,8 +1,8 @@
 import React from "react";
-import synx from "../assets/img/synx-logo.svg";
+/*import synx from "../assets/img/synx-logo.svg";
 import imgCC from "../assets/img/creative-commons/cc.svg";
 import imgBy from "../assets/img/creative-commons/by.svg";
-import imgRemix from "../assets/img/creative-commons/remix.svg";
+import imgRemix from "../assets/img/creative-commons/remix.svg";*/
 
 export const Footer = () => {
   return (
@@ -12,7 +12,7 @@ export const Footer = () => {
           <div className="row">
             <div className="col-4">
               <a href="https://synx.ai" target="_blank">
-                <img src={synx} className="footer-logo" />
+                <img src="assets/img/synx-logo.svg" className="footer-logo" />
               </a>
               <p>
                 Project proudly powered by <strong>Synx Open Source</strong>{" "}
@@ -30,17 +30,17 @@ export const Footer = () => {
             <div className="col-4"></div>
             <div className="col-4">
               <div className="tooltip">
-                <img src={imgCC} className="cc-logo" />
+                <img src="assets/img/creative-commons/cc.svg" className="cc-logo" />
                 <span className="tooltiptext">Cretive Commons</span>
               </div>
 
               <div className="tooltip">
-                <img src={imgBy} className="cc-logo" />
+                <img src="assets/img/creative-commons/by.svg" className="cc-logo" />
                 <span className="tooltiptext">Attribution By</span>
               </div>
 
               <div className="tooltip">
-                <img src={imgRemix} className="cc-logo" />
+                <img src="assets/img/creative-commons/remix.svg" className="cc-logo" />
                 <span className="tooltiptext">Remix Allowed</span>
               </div>
 

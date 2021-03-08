@@ -1,6 +1,6 @@
 import React from "react";
-import synx from "../assets/img/synx-logo.svg";
-import github from "../assets/img/github.svg";
+//import synx from "../assets/img/synx-logo.svg";
+//import github from "../assets/img/github.svg";
 
 export const Header = () => {
   return (
@@ -10,12 +10,12 @@ export const Header = () => {
           <div className="row">
             <div className="col-6">
               <a href="https://synx.ai" target="_blank">
-                <img src={synx} className="logo" />
+                <img src="assets/img/synx-logo.svg" className="logo" />
               </a>
             </div>
             <div className="col-6">
               <a href="https://synx.ai" target="_blank">
-                <img src={github} className="github" />
+                <img src="assets/img/github.svg" className="github" />
               </a>
             </div>
           </div>
