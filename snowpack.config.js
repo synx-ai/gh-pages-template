@@ -8,7 +8,7 @@ if (fs.existsSync(path.resolve(process.cwd(), "../package.json"))) {
 } else if (
   fs.existsSync(path.resolve(process.cwd(), "../gh-pages.config.json"))
 ) {
-  pkg = require("../gh-page.config.json");
+  pkg = require("../gh-pages.config.json");
 } else {
   pkg = require("./package.json");
 }
