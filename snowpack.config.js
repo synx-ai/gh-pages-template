@@ -5,6 +5,10 @@ let pkg;
 
 if (fs.existsSync(path.resolve(process.cwd(), "../package.json"))) {
   pkg = require("../package.json");
+} else if (
+  fs.existsSync(path.resolve(process.cwd(), "../gh-pages.config.json"))
+) {
+  pkg = require("../gh-page.config.json");
 } else {
   pkg = require("./package.json");
 }
@@ -38,7 +42,7 @@ module.exports = {
     /* ... */
   },
   buildOptions: {
-    baseUrl: "/gh-pages-snowpack",
+    baseUrl: pkg.baseUrl !== undefined ? pkg.baseUrl : "/",
     out: "../docs",
   },
 };
