@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "@mdx-js/react": "./@mdx-js/react.js",
+    "prism-react-renderer": "./prism-react-renderer.js",
+    "react": "./react.js",
+    "react-dom": "./react-dom.js",
+    "react/jsx-runtime": "./react/jsx-runtime.js"
+  }
+}
