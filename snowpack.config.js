@@ -27,6 +27,16 @@ module.exports = {
     "@snowpack/plugin-babel",
     "@snowpack/plugin-sass",
     "snowpack-plugin-mdx",
+    /*["@snowpack/plugin-webpack",
+      {
+        sourceMap: false,
+        outputPattern: {
+          css: '[name].[contenthash].bundle.css',
+          js: '[name].[contenthash].bundle.js',
+          assets: '[name].[contenthash]',
+        },
+      },
+    ],*/
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
@@ -45,6 +55,6 @@ module.exports = {
   },
   buildOptions: {
     baseUrl: pkg.baseUrl !== undefined ? pkg.baseUrl : "/",
-    out: "../docs",
+    out: "docs",
   },
 };
