@@ -1,6 +1,4 @@
 import React from "react";
-//import synx from "../assets/img/synx-logo.svg";
-//import github from "../assets/img/github.svg";
 
 export const Header = () => {
   return (

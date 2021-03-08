@@ -25,7 +25,7 @@ module.exports = {
   plugins: [
     "@snowpack/plugin-babel",
     "@snowpack/plugin-sass",
-    "snowpack-plugin-mdx"
+    "snowpack-plugin-mdx",
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
